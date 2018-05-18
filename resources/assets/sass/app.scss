@@ -1,9 +1,17 @@
 
-// Fonts
-@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+// Grab da best font
+@import url("https://fonts.googleapis.com/css?family=Fira+Mono:400,500,700");
 
-// Variables
+@import 'node_modules/animate.css/source/base';
+@import 'node_modules/animate.css/source/attention_seekers/bounce';
+@import 'node_modules/animate.css/source/attention_seekers/swing';
+
+
+// Custom variables
+@import "helpers";
 @import "variables";
+@import "animation";
+@import "custom";
 
-// Bootstrap
-@import "~bootstrap-sass/assets/stylesheets/bootstrap";
+// Strap it up
+@import "~bootstrap/scss/bootstrap";

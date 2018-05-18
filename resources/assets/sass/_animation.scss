@@ -1,0 +1,11 @@
+// Fade in
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+.fade-in {
+    opacity:0;  /* make things invisible upon start */
+    @include animation(fadeIn ease-in 1);
+    @include animation-fill-mode(forwards);
+    @include animation-duration(1s);
+}

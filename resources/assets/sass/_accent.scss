@@ -1,0 +1,61 @@
+// Accent
+@each $accent in $accent-list {
+    .accent-#{nth($accent, 1)},.icon.accent-#{nth($accent, 1)}{
+        color: nth($accent, 2);
+
+        &:hover, &:focus {
+            color: darken(nth($accent, 2), 10%);
+        }
+    }
+
+    .accent-bg.accent-#{nth($accent, 1)}{
+        background-color: nth($accent, 2);
+    }
+
+    .accent-picker.accent-#{nth($accent, 1)}, .accent-select.accent-#{nth($accent, 1)}{
+        @include circle(15px, nth($accent, 2), inline-block);
+    }
+}
+.accent-picker,.accent-select {
+    @extend .p-0;
+
+    animation-delay: 3s;
+    border: none;
+    cursor: pointer;
+
+    &:hover, &:focus {
+        outline: 0;
+        border: 2px solid $light;
+    }
+}
+.accent.transition {
+    @include transition(color, 1s);
+}
+.accent-dropdown {
+    margin-top: -($spacer * .5);
+
+    .dropdown-menu {
+        @extend .px-1, .pt-0;
+        text-align: center;
+        background-color: transparent;
+        min-width: 20px;
+        margin-left: -($spacer * .25);
+
+        // Transition
+        @include transition(all, .5s);
+        max-height: 0;
+        display:block;
+        overflow: hidden;
+        opacity: 0;
+    }
+    &.show .dropdown-menu{
+        max-height: 300px;
+        opacity: 1;
+    }
+    .dropdown-item {
+        @extend .px-0, .py-0;
+        &:hover, &:focus {
+            background-color: transparent;
+        }
+    }
+}

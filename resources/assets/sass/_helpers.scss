@@ -1,0 +1,83 @@
+// Functions
+@function color($key: "blue") {
+    @return map-get($colors, $key);
+}
+
+@function theme-color($key: "primary") {
+    @return map-get($theme-colors, $key);
+}
+
+@function gray($key: "100") {
+    @return map-get($grays, $key);
+}
+
+@mixin box-sizing($option) {
+    -webkit-box-sizing: $option;
+       -moz-box-sizing: $option;
+            box-sizing: $option;
+}
+@mixin box-pack($option) {
+    -webkit-box-pack: $option;
+       -moz-box-pack: $option;
+            box-pack: $option;
+}
+@mixin box-align($option) {
+     -webkit-box-align: $option;
+        -moz-box-align: $option;
+        -ms-flex-align: $option;
+           align-items: $option;
+}
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+       -moz-border-radius: $radius;
+            border-radius: $radius;
+}
+
+@mixin circle($size, $color, $display) {
+    display: $display;
+    line-height: $size;
+    width: $size;
+    height: $size;
+    background: $color;
+    @include box-sizing(border-box);
+    @include border-radius($size/2);
+
+}
+
+@mixin animation($animation...) {
+    -webkit-animation: $animation;
+        -ms-animation: $animation;
+            animation: $animation;
+}
+@mixin animation-fill-mode($fillmode...) {
+    -webkit-animation-fill-mode: $fillmode;
+        -ms-animation-fill-mode: $fillmode;
+            animation-fill-mode: $fillmode;
+}
+@mixin animation-duration($duration...){
+    -webkit-animation-duration: $duration;
+       -moz-animation-duration: $duration;
+            animation-duration: $duration;
+}
+
+@mixin transform($transform...) {
+    -webkit-transform: $transform;
+        -ms-transform: $transform;
+            transform: $transform;
+}
+
+@mixin transition($transition...) {
+    -webkit-transition: $transition;
+       -moz-transition: $transition;
+        -ms-transition: $transition;
+         -o-transition: $transition;
+            transition: $transition;
+}
+
+.clearTransition{
+    -webkit-transition: none;
+       -moz-transition: none;
+        -ms-transition: none;
+         -o-transition: none;
+            transition: none;
+}

@@ -1,0 +1,170 @@
+// Base structurign
+* {
+    @include box-sizing(border-box !important);
+}
+html {
+    font-size: 62.5%; // Sets Rem
+}
+
+// Accents
+@import "accent";
+
+// Headers
+.header-wrapper {
+    z-index: 1;
+    height: 120px;
+    .header {
+        @extend .d-flex;
+        @include box-pack(justify);
+        @include box-align(center);
+
+        justify-content: space-between;
+        height: 12rem;
+        padding: 3rem 0;
+
+        .header-title, .header-subtitle {
+            @extend .m-0;
+            font-size: 1.8rem;
+            line-height: 1.8rem;
+        }
+        .header-subtitle {
+            @extend .mt-1, .text-muted;
+            text-align: center;
+            font-size: 1.7rem;
+            line-height: 1.7rem;
+        }
+        .header-nav {
+            .nav-list {
+                @extend .d-flex, .m-0, .p-0;
+                list-style: none;
+                .nav-item {
+                    list-style: none;
+                    margin: 0 0 0 2rem;
+                    padding: 0;
+                    a {
+                        font-size: 1.8rem;
+                    }
+                }
+            }
+        }
+    }
+}
+.main {
+    z-index: 0;
+}
+
+section {
+    @extend .mb-60, .mb-md-80;
+}
+
+.section-header {
+    @extend .d-flex;
+    @include box-pack(justify);
+    justify-content: space-between;
+    .section-header-title {
+        @extend .text-muted;
+        font-size: 2rem;
+    }
+}
+
+$jumbotron-bg: none;
+.hero {
+    @extend .d-flex, .flex-column, .justify-content-center;
+    position: relative;
+    height: calc(100vh - 120px);
+    .jumbotron {
+        @extend .px-0;
+    }
+    .hero-arrow .icon{
+        animation-duration: 2s;
+        cursor: pointer;
+        position: absolute;
+        bottom: 2.75rem;
+        height: 32px;
+        width:  auto;
+        left: 0;
+    }
+}
+
+.header-title:hover  {
+    text-decoration: none;
+}
+
+.link-u {
+    text-decoration: underline;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.link {
+    position: relative;
+    text-decoration: none;
+
+    &:before {
+        padding: 0 -($spacer * .5);
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 0.5px;
+        bottom: ($spacer * .25);
+        left: 0;
+        background-color: currentColor;
+        visibility: hidden;
+        @include transform(scaleX(0));
+        @include transition(all 0.3s ease-in-out 0s);
+    }
+    &:hover {
+        text-decoration: none;
+        &:before {
+            visibility: visible;
+            @include transform(scaleX(.8));
+        }
+    }
+}
+
+.icon {
+    display: inline-block;
+    vertical-align: text-top;
+    fill: currentColor;
+}
+
+p.large {
+    font-size: 24px;
+    font-size: 2.4rem;
+    line-height: 36px;
+    line-height: 3.6rem;
+    margin-bottom: 2.4rem;
+}
+p.extra-large {
+    font-size: 28px;
+    font-size: 2.8rem;
+    line-height: 42px;
+    line-height: 4.2rem;
+    margin-bottom: 2.8rem;
+}
+
+// Footer
+footer {
+    background-image: url('/img/noise.png');
+    background-color: $dark;
+    padding: 6rem 0 4rem;
+}
+
+.elevator .icon{
+    @include transition(all .15s ease-in);
+    @include transform(translate3d(0,10px, 0));
+    position: fixed;
+    bottom: 3rem;
+    right: 4rem;
+    height: 32px;
+    width:  auto;
+    cursor: pointer;
+    opacity: 0;
+
+
+}
+.elevator-visible .icon{
+    @include transform(translateZ(0));
+    opacity: 1;
+}
