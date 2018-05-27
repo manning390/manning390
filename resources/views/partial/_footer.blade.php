@@ -16,8 +16,8 @@
             <div class="col-12 col-sm-6 col-md-2 mb-40">
                 <h4 class="mb-20 mb-sm-40">Menu</h4>
                 <dd><a class="accent" href="{{ route('about') }}">About</a></dd>
-                <dd><a class="accent" href="{{ route('project.index') }}">Projects</a></dd>
-                <dd><a class="accent" href="{{ route('blog.index') }}">Blog</a></dd>
+                {{-- <dd><a class="accent" href="{{ route('project.index') }}">Projects</a></dd> --}}
+                {{-- <dd><a class="accent" href="{{ route('blog.index') }}">Blog</a></dd> --}}
             </div>
             <div class="col-12 col-sm-6 col-md-3 mb-40">
                 <h4 class="mb-20 mb-sm-40">Contact</h4>
@@ -41,7 +41,7 @@
         <div class="row">
             <div class="col-12">
                 <p class="copyright">
-                    Copyright Michael Manning {{ date('Y') }} &copy; <a class="accent" href="{{ '/' }}">More information</a> &mdash; made with <a class="accent" href="https://laravel.com">Laravel</a>
+                    Copyright Michael Manning {{ date('Y') }} {{-- <a class="accent" href="{{ '/' }}">More information</a> --}} &mdash; made with <a class="accent" href="https://laravel.com">Laravel</a>
                 </p>
             </div>
         </div>

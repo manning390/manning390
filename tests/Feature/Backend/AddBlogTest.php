@@ -13,5 +13,6 @@ class AddBlogTest extends TestCase {
         // Arrange
         // Act
         // Assert
+        $this->assertTrue(true);
     }
 }
