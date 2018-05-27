@@ -89,7 +89,9 @@ $jumbotron-bg: none;
 .header-title:hover  {
     text-decoration: none;
 }
-
+a {
+    outline:none;
+}
 .link-u {
     text-decoration: underline;
     &:hover {

@@ -182,6 +182,7 @@ html {
 .accent-ruby,
 .icon.accent-ruby {
   color: #a80315;
+  outline: none;
 }
 
 .accent-ruby:hover,
@@ -210,6 +211,7 @@ html {
 .accent-orange,
 .icon.accent-orange {
   color: #c88623;
+  outline: none;
 }
 
 .accent-orange:hover,
@@ -238,6 +240,7 @@ html {
 .accent-teal,
 .icon.accent-teal {
   color: #0ed2ae;
+  outline: none;
 }
 
 .accent-teal:hover,
@@ -266,6 +269,7 @@ html {
 .accent-violet,
 .icon.accent-violet {
   color: #7314c8;
+  outline: none;
 }
 
 .accent-violet:hover,
@@ -415,6 +419,10 @@ html {
 
 .header-title:hover {
   text-decoration: none;
+}
+
+a {
+  outline: none;
 }
 
 .link-u {

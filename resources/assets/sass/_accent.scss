@@ -2,6 +2,7 @@
 @each $accent in $accent-list {
     .accent-#{nth($accent, 1)},.icon.accent-#{nth($accent, 1)}{
         color: nth($accent, 2);
+        outline: none;
 
         &:hover, &:focus {
             color: darken(nth($accent, 2), 10%);
