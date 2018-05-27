@@ -24,5 +24,24 @@ abstract class TestCase extends BaseTestCase
 
             return $response;
         });
+
     }
+
+    /**
+     * I can never remember this so syntatic sugar/note.
+     *
+     * Runs Illuminate\Foundation\Testing\Concerns\InteractsWithExceptionHandling@withoutExceptionHandling()
+     *
+     * @param array $exceptions
+     * @return $this
+     */
+    protected function disableExceptionHandling(array $exceptions = []) {
+        return $this->withoutExceptionHandling($exceptions);
+    }
+
+    // Same as above
+    protected function de(array $e = []) {
+        return $this->withoutExceptionHandling($e);
+    }
+
 }
