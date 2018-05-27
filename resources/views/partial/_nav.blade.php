@@ -4,20 +4,22 @@
             <div class="col-12">
                 <header class="header">
                     <div class="header-logo" href="/">
-                        <a href="#" class="header-title accent"> Michael Manning </a>
+                        <a href="{{ route('about') }}" class="header-title accent"> Michael Manning </a>
                         <p class="header-subtitle"> Game Developer </p>
                     </div>
                     <nav class="header-nav">
                         <ul class="nav-list">
-                            <li class="nav-item">
+                             <li class="nav-item">
                                 <a class="nav-link link accent {{ active('about') }}" href="{{ route('about') }}">About</a>
                             </li>
+{{--
                             <li class="nav-item">
                                 <a class="nav-link link accent {{ active('project') }}" href="{{ route('project.index') }}">Projects</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link link accent {{ active('blog') }}" href="{{ route('blog.index') }}">Blog</a>
                             </li>
+ --}}
                             <li class="nav-item hide-xs show-sm">
                                 <a class="nav-link accent text-muted" href="mailto:{{ config('blog.email') }}" title="Email Me">{{ config('blog.email') }}</a>
                             </li>
