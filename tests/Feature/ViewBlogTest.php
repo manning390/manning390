@@ -54,7 +54,7 @@ class ViewBlogTest extends TestCase
     public function user_cannot_view_an_unpublished_post() {
         // Arrange
         $post = factory(Post::class)->create([
-            'published_at' => Carbon::parse('5/3/2018'),
+            'published_at' => Carbon::parse('+2 years'),
             'title' => 'My future post'
         ]);
         // Hard coding because slug generation method is private
