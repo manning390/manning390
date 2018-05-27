@@ -13,6 +13,9 @@
     <body class="fade-in">
         @include('partial._nav')
 
+        {{-- Temporary Under Construction Alert --}}
+        @includeWhen(Route::current()->getName() !== 'about', 'partial._wip')
+
         <main class="main">
             @yield('content')
         </main>
