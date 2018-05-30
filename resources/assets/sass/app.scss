@@ -2,15 +2,16 @@
 // Grab da best font
 @import url("https://fonts.googleapis.com/css?family=Fira+Mono:400,500,700");
 
-@import 'node_modules/animate.css/source/base';
-@import 'node_modules/animate.css/source/attention_seekers/bounce';
-@import 'node_modules/animate.css/source/attention_seekers/swing';
-
+@import '~animate.css/source/base';
+@import '~animate.css/source/attention_seekers/bounce';
+@import '~animate.css/source/attention_seekers/swing';
 
 // Custom variables
 @import "helpers";
 @import "variables";
 @import "animation";
+
+@import "~bootstrap/scss/mixins/_breakpoints";
 @import "custom";
 
 // Strap it up

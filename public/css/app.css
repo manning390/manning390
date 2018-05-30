@@ -372,18 +372,11 @@ html {
   line-height: 1.7rem;
 }
 
-.header-wrapper .header .header-nav .nav-list {
-  list-style: none;
-}
-
-.header-wrapper .header .header-nav .nav-list .nav-item {
-  list-style: none;
-  margin: 0 0 0 2rem;
-  padding: 0;
-}
-
-.header-wrapper .header .header-nav .nav-list .nav-item a {
-  font-size: 1.8rem;
+.header-wrapper .header .header-nav .nav .nav-link {
+  font-size: 18rempx;
+  font-size: 1.8remrem;
+  line-height: 27rempx;
+  line-height: 2.7remrem;
 }
 
 .main {
@@ -398,12 +391,45 @@ html {
 }
 
 .section-header .section-header-title {
-  font-size: 2rem;
+  font-size: 20rempx;
+  font-size: 2remrem;
+  line-height: 30rempx;
+  line-height: 3remrem;
 }
 
 .hero {
   position: relative;
-  height: calc(100vh - 120px);
+  height: calc(100vh - 12rem);
+}
+
+.hero .jumbotron h3 {
+  font-size: 35px;
+  font-size: 3.5rem;
+  line-height: 52.5px;
+  line-height: 5.25rem;
+}
+
+.hero .jumbotron p {
+  font-size: 25px;
+  font-size: 2.5rem;
+  line-height: 37.5px;
+  line-height: 3.75rem;
+}
+
+@media (max-width: 575.98px) {
+  .hero .jumbotron h3 {
+    font-size: 24px;
+    font-size: 2.4rem;
+    line-height: 36px;
+    line-height: 3.6rem;
+  }
+
+  .hero .jumbotron p {
+    font-size: 18px;
+    font-size: 1.8rem;
+    line-height: 27px;
+    line-height: 2.7rem;
+  }
 }
 
 .hero .hero-arrow .icon {
@@ -470,7 +496,17 @@ a {
   fill: currentColor;
 }
 
-p.large {
+p,
+.paragraph {
+  font-size: 20px;
+  font-size: 2rem;
+  line-height: 30px;
+  line-height: 3rem;
+  margin-bottom: 2rem;
+  margin-top: 0;
+}
+
+.large {
   font-size: 24px;
   font-size: 2.4rem;
   line-height: 36px;
@@ -478,12 +514,52 @@ p.large {
   margin-bottom: 2.4rem;
 }
 
-p.extra-large {
+.extra-large {
   font-size: 28px;
   font-size: 2.8rem;
   line-height: 42px;
   line-height: 4.2rem;
   margin-bottom: 2.8rem;
+}
+
+small {
+  font-size: 17px;
+  font-size: 1.7rem;
+  line-height: 25.5px;
+  line-height: 2.55rem;
+}
+
+p,
+.paragraph {
+  font-size: 18px;
+  font-size: 1.8rem;
+  line-height: 27px;
+  line-height: 2.7rem;
+  margin-bottom: 1.8rem;
+}
+
+.large {
+  font-size: 20px;
+  font-size: 2rem;
+  line-height: 30px;
+  line-height: 3rem;
+  margin-bottom: 2rem;
+}
+
+.extra-large {
+  font-size: 22px;
+  font-size: 2.2rem;
+  line-height: 33px;
+  line-height: 3.3rem;
+  margin-bottom: 2.2rem;
+}
+
+.small {
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 24px;
+  line-height: 2.4rem;
+  margin-bottom: 1.6rem;
 }
 
 footer {
@@ -7391,7 +7467,7 @@ button.bg-dark:focus {
 
 .d-flex,
 .header-wrapper .header,
-.header-wrapper .header .header-nav .nav-list,
+.header-wrapper .header .header-nav .nav,
 .section-header,
 .hero {
   display: -webkit-box !important;
@@ -8660,7 +8736,7 @@ button.bg-dark:focus {
 .m-0,
 .header-wrapper .header .header-title,
 .header-wrapper .header .header-subtitle,
-.header-wrapper .header .header-nav .nav-list {
+.header-wrapper .header .header-nav .nav {
   margin: 0 !important;
 }
 
@@ -8729,6 +8805,7 @@ button.bg-dark:focus {
 }
 
 .ml-2,
+.header-wrapper .header .header-nav .nav,
 .mx-2 {
   margin-left: 0.5rem !important;
 }
@@ -8929,7 +9006,7 @@ section,
 .p-0,
 .accent-picker,
 .accent-select,
-.header-wrapper .header .header-nav .nav-list {
+.header-wrapper .header .header-nav .nav {
   padding: 0 !important;
 }
 

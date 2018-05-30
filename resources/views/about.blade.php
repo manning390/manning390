@@ -4,14 +4,14 @@
     <article  class="container">
         <div class="row">
             <div class="col-12 col-md-10">
-                <section class="hero">
+                <section id="hero" class="hero">
                     <div class="jumbotron">
                         <h3>
-                            Hey, I'm an aspiring game developer.<br >
+                            Hey, I'm an aspiring game developer.<br>
                             I have leveled up other skills though.
                         </h3>
                         <p class="lead mt-2">
-                            I design, build &amp; play video games.<br />
+                            I design, build &amp; play video games.<br class="d-none d-md-inline" />
                             I also tinker with full-stack web applications.<br />
                             Want to collaborate?<br />
                             I'm game <a class="link-u accent" href="mailto:{{ config('blog.email') }}" title="Email Me">{{ config('blog.email') }}</a>
@@ -34,7 +34,7 @@
             <div class="row">
                 <div class="col-12 col-md-6">
                     <p class="extra-large">
-                        I love the art form of games.<br />
+                        I love the art form of games.<br class="d-none d-md-inline" />
                         Here are a few things I am passionate about.
                     </p>
                 </div>
