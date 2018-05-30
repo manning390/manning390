@@ -8,21 +8,12 @@
                         <p class="header-subtitle"> Game Developer </p>
                     </div>
                     <nav class="header-nav">
-                        <ul class="nav-list">
-                            <li class="nav-item">
+                        <div class="nav">
                                 <a class="nav-link link accent {{ active('about') }}" href="{{ route('about') }}">About</a>
-                            </li>
-                            <li class="nav-item">
                                 <a class="nav-link link accent {{ active('project') }}" href="{{ route('project.index') }}">Projects</a>
-                            </li>
-                            <li class="nav-item">
                                 <a class="nav-link link accent {{ active('blog') }}" href="{{ route('blog.index') }}">Blog</a>
-                            </li>
-                            <li class="nav-item hide-xs show-sm">
-                                <a class="nav-link accent text-muted" href="mailto:{{ config('blog.email') }}" title="Email Me">{{ config('blog.email') }}</a>
-                            </li>
-                            <li class="nav-item d-flex flex-column">
-                                <div class="accent-dropdown dropdown">
+                                <a class="nav-link accent text-muted d-none d-sm-inline" href="mailto:{{ config('blog.email') }}" title="Email Me">{{ config('blog.email') }}</a>
+                                <div class="nav-link accent-dropdown dropdown">
                                     <button class="accent-picker" data-toggle="dropdown"></button>
                                     <div class="dropdown-menu">
                                         <div class="dropdown-item">
@@ -39,8 +30,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </li>
-                        </ul>
+                        </div>
                     </nav>
                 </header>
             </div>

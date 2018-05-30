@@ -42,3 +42,11 @@ $link-color: $accent-default;
 $text-muted: $muted;
 $font-weight-light: 200;
 $font-weight-normal: 200;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+) !default;

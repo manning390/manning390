@@ -81,3 +81,10 @@
          -o-transition: none;
             transition: none;
 }
+
+@mixin font-size($sizeValue: 2, $ratio: 1.5) {
+    font-size: ($sizeValue * 10) + px;
+    font-size: $sizeValue + rem;
+    line-height: ($sizeValue * 10 * $ratio) + px;
+    line-height: ($sizeValue * $ratio) + rem;
+}

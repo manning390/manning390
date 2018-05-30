@@ -34,16 +34,10 @@ html {
             line-height: 1.7rem;
         }
         .header-nav {
-            .nav-list {
-                @extend .d-flex, .m-0, .p-0;
-                list-style: none;
-                .nav-item {
-                    list-style: none;
-                    margin: 0 0 0 2rem;
-                    padding: 0;
-                    a {
-                        font-size: 1.8rem;
-                    }
+            .nav {
+                @extend .d-flex, .m-0, .ml-2, .p-0;
+                .nav-link {
+                    @include font-size(1.8rem);
                 }
             }
         }
@@ -63,7 +57,7 @@ section {
     justify-content: space-between;
     .section-header-title {
         @extend .text-muted;
-        font-size: 2rem;
+        @include font-size(2rem);
     }
 }
 
@@ -71,9 +65,25 @@ $jumbotron-bg: none;
 .hero {
     @extend .d-flex, .flex-column, .justify-content-center;
     position: relative;
-    height: calc(100vh - 120px);
+    height: calc(100vh - 12rem);
     .jumbotron {
         @extend .px-0;
+        h3 {
+            @include font-size(3.5);
+        }
+        p {
+            @include font-size(2.5);
+        }
+        @include media-breakpoint-only(xs) {
+            h3 {
+                @include font-size(2.4);
+                // line-height: 3.6rem;
+            }
+            p {
+                @include font-size(1.8);
+                // line-height: 3rem;
+            }
+        }
     }
     .hero-arrow .icon{
         animation-duration: 2s;
@@ -131,19 +141,45 @@ a {
     fill: currentColor;
 }
 
-p.large {
-    font-size: 24px;
-    font-size: 2.4rem;
-    line-height: 36px;
-    line-height: 3.6rem;
+p,
+.paragraph {
+    @include font-size(2);
+    margin-bottom: 2rem;
+    margin-top: 0;
+}
+
+.large {
+    @include font-size(2.4);
     margin-bottom: 2.4rem;
 }
-p.extra-large {
-    font-size: 28px;
-    font-size: 2.8rem;
-    line-height: 42px;
-    line-height: 4.2rem;
+
+.extra-large {
+    @include font-size(2.8);
     margin-bottom: 2.8rem;
+}
+
+small {
+    @include font-size(1.7);
+}
+
+@include media-breakpoint-up(xs) {
+    p,
+    .paragraph {
+        @include font-size(1.8);
+        margin-bottom:1.8rem;
+    }
+    .large {
+        @include font-size(2);
+        margin-bottom: 2rem;
+    }
+    .extra-large {
+        @include font-size(2.2);
+        margin-bottom: 2.2rem;
+    }
+    .small {
+        @include font-size(1.6);
+        margin-bottom: 1.6rem;
+    }
 }
 
 // Footer
