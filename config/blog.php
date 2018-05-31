@@ -2,7 +2,7 @@
 
 return [
     'title' => 'Game & Full Stack Developer',
-    'location' => 'Bozeman, Montana',
+    'location' => 'Portland, Oregon',
     'perPage' => 5,
     'bio' => "I'm an aspiring game developer. I have leveled up other skill trees though.",
     'email' => 'hey@manning390.com',
